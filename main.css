@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway&display=swap');
+
+body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	color: hsl(243, 87%, 12%);
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+	font-size: 2.2vw;
+}
+
+h2, input {
+	font-size: 2vw;
+	font-family: 'Raleway', sans-serif;
+}
+
+p, a, button{
+	color: hsl(0, 0%, 50%);
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2vw;
+}
+
+ion-icon {
+  font-size: 2.2vw;
+  margin: 0 10px;
+}
+
+main {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+main div.img {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	flex-basis: 50%;
+	flex-shrink: 3;
+}
+
+main div.img:before {
+	content: "";
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	top: -50%;
+	left: -50%;
+	z-index: -1;
+	background: url(images/bg-intro.svg);
+	background-size: cover;
+    background-repeat-x: repeat;
+}
+
+
+
+main div.img img {
+	margin: 0;
+	padding: 0;
+	width: auto;
+	align-self: center;
+	display: block;
+    max-width: 80%;
+    height: auto;
+}
+
+main div.text {
+	flex-basis: 50%;
+	margin: 0 60px;
+}
+
+header {
+	height: 15vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header img{
+	display: block;
+	max-width: 10vw;
+	height: auto;
+}
+
+
+div.flex {
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+div.flex div.sign-up {
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+div.flex div.sign-up h2 {
+	flex-basis: 100%;
+	margin: 8px 0;
+}
+
+div.flex div.sign-up input {
+	flex-basis: 75%;
+	flex-shrink: 3;
+	height: 10vh;
+    box-shadow: 2px 2px 2px -1px rgba(0,0,0,0.5);
+    border: none;
+}
+
+
+div.flex div.sign-up input::placeholder {
+	opacity: 0.3;
+}
+
+div.flex div.sign-up button {
+	flex-basis: 20%;
+	height: 10vh;
+	border: none;
+	color: white;
+	background: turquoise;
+	border-radius: 10px;
+    box-shadow: 2px 2px 2px -1px rgba(0,0,0,0.5);
+    font-weight: bold;
+}
+
+div.flex a {
+	align-self: flex-end;
+	color: grey;
+}
+
+footer {
+	height: 5vh;
+}
+
+footer p {
+	margin: 0;
+}
+
+
+.attribution { font-size: 1vw; text-align: center; }
+.attribution a { font-size: 1vw; color: hsl(228, 45%, 44%); }
+
+@media only screen and (max-width: 600px) {
+	body {overflow: initial; height: auto; width: 100%;}
+	h1, h2, button{font-size: 5vw;}
+	p, a, input, .attribution, .attribution a{font-size: 3vw;}
+	ion-icon {font-size: 4vw;}
+	main {height: auto; width: 100%;}
+	main {background: url(images/bg-intro.svg); background-size: 100%, 50%; background-position-y: -80px; background-repeat: no-repeat; flex-direction: column;}
+	main div.img {background: transparent; flex-basis: initial; flex-shrink: initial;}
+	main div.img:before{display: none;}
+	main div.img img {max-width: 60%; margin: 20% auto;}
+	main div.text {flex-basis: initial; margin-top: 0;}
+	header {position: absolute; top: 0; left:0; width: 100%; justify-content: space-around;}
+	header img {max-width: 20vw; height: auto;}
+	div.flex { height: auto; }
+	div.flex .item {margin: 20px 0;}
+	div.flex div.sign-up input {flex-basis: 100%; margin: 10px 0; height: 30px}
+	div.flex div.sign-up button {flex-basis: 30%; font-size: 3vw; height: 30px}
+	footer {margin:0; height: auto;}
+}
+
+@media only screen and (max-width: 400px) {
+	h1, h2, button{font-size: 6vw;}
+	p, a, input {font-size: 4vw;}
+	main {background-position-y: -50px;}
+	main div.text {margin: 30px;}
+}
+
+@media only screen and (max-width: 300px) {
+	h1, h2, button{font-size: 7vw;}
+	p, a, input {font-size: 5vw;}
+	main {background-position-y: 0px;}
+	main div.text {margin: 0 10px;}
+}
